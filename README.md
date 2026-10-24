@@ -5,6 +5,10 @@
 A tiny pixel guy who lives on your desktop. He shows up when a music app starts
 playing, dances, and disappears when the music stops.
 
+<p align="center">
+  <img src="assets/icon.png" alt="The GuyDances pixel dancer" width="220">
+</p>
+
 ## Install from a release (no build needed)
 
 Grab the latest files from
