@@ -1,0 +1,17 @@
+# build output
+/build/
+/build-win/
+/dist/
+
+# generated preview from tools/extract_sprite.py
+/assets/preview.png
+
+# python
+__pycache__/
+*.pyc
+
+# logs / editor / OS junk
+*.log
+.vscode/
+.idea/
+.DS_Store
