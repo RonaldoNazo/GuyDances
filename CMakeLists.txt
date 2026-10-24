@@ -43,6 +43,12 @@ find_package(Threads REQUIRED)
 target_link_libraries(guydances PRIVATE Threads::Threads)
 
 if(WIN32)
+    enable_language(RC)
+    configure_file(
+        ${CMAKE_SOURCE_DIR}/packaging/windows/guydances.rc.in
+        ${CMAKE_BINARY_DIR}/guydances.rc
+        @ONLY)
+    target_sources(guydances PRIVATE ${CMAKE_BINARY_DIR}/guydances.rc)
     target_compile_definitions(guydances PRIVATE _WIN32_WINNT=0x0601)
     target_link_libraries(guydances PRIVATE opengl32 gdi32 ole32 user32 shell32)
     set_target_properties(guydances PROPERTIES WIN32_EXECUTABLE TRUE)

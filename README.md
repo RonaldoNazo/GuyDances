@@ -1,7 +1,59 @@
 # GuyDances
 
+[![build](https://github.com/RonaldoNazo/GuyDances/actions/workflows/build.yml/badge.svg)](https://github.com/RonaldoNazo/GuyDances/actions/workflows/build.yml)
+
 A tiny pixel guy who lives on your desktop. He shows up when a music app starts
 playing, dances, and disappears when the music stops.
+
+## Install from a release (no build needed)
+
+Grab the latest files from
+[Releases](https://github.com/RonaldoNazo/GuyDances/releases).
+
+### Ubuntu / Debian
+
+```bash
+sudo apt install ./guydances_<version>_amd64.deb
+```
+
+Then launch **GuyDances** from the app grid. To also start him at login:
+
+```bash
+mkdir -p ~/.config/autostart
+cp /usr/share/applications/guydances.desktop ~/.config/autostart/
+echo 'X-GNOME-Autostart-enabled=true' >> ~/.config/autostart/guydances.desktop
+```
+
+### Other Linux (X11)
+
+```bash
+tar xzf guydances-<version>-linux-x86_64.tar.gz
+cd guydances-<version>-linux-x86_64
+./install.sh              # or ./install.sh --autostart
+```
+
+Or run `./guydances` straight from that folder without installing anything.
+
+### Windows 10/11
+
+Download `guydances-<version>-windows-x64.zip`, unzip it, and double-click
+`guydances.exe`. Windows may show a SmartScreen warning because the exe is
+unsigned: click **More info → Run anyway**.
+
+### Remove
+
+```bash
+sudo apt remove guydances
+```
+
+For the tarball install:
+
+```bash
+rm -f ~/.local/bin/guydances \
+      ~/.local/share/applications/guydances.desktop \
+      ~/.local/share/icons/hicolor/256x256/apps/guydances.png \
+      ~/.config/autostart/guydances.desktop
+```
 
 ## Use
 

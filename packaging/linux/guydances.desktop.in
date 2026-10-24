@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=GuyDances
+GenericName=Desktop Dancer
+Comment=Dances when music is playing
+Exec=@BIN@
+Icon=guydances
+Terminal=false
+Categories=Utility;
+StartupNotify=false
